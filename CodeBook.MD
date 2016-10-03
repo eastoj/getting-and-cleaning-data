@@ -1,43 +1,99 @@
-Description of the data
 
-Description of abbreviations of measurements
 
-Body = related to body movement.
-Gravity = acceleration of gravity
-Acc = accelerometer measurement
-Gyro = gyroscopic measurements
-Jerk = sudden movement acceleration
-Mag = magnitude of movement
-mean and SD are calculated for each subject for each activity for each mean and SD measurements.
-The units given are g’s for the accelerometer and rad/sec for the gyro and g/sec and rad/sec/sec for the corresponding jerks.
+This code book summarizes the resulting data fields in the ouput file of this exercise called `tidy.txt`.
 
-These signals were used to estimate variables of the feature vector for each pattern:
-‘-XYZ’ is used to denote 3-axial signals in the X, Y and Z directions. They total 33 measurements including the 3 dimensions - the X,Y, and Z axes.
+# Identifiers
 
->tBodyAcc-XYZ
->tGravityAcc-XYZ
-tBodyAccJerk-XYZ
-tBodyGyro-XYZ
-tBodyGyroJerk-XYZ
-tBodyAccMag
-tGravityAccMag
-tBodyAccJerkMag
-tBodyGyroMag
-tBodyGyroJerkMag
-fBodyAcc-XYZ
-fBodyAccJerk-XYZ
-fBodyGyro-XYZ
-fBodyAccMag
-fBodyAccJerkMag
-fBodyGyroMag
-fBodyGyroJerkMag
+* `subject` - The ID of the test subject
+* `activity` - The type of activity performed when the corresponding measurements were taken
 
-The set of variables that were estimated from these signals are:
+# Measurements
 
-mean(): Mean value
-std(): Standard deviation
+* `tBodyAccMeanX`
+* `tBodyAccMeanY`
+* `tBodyAccMeanZ`
+* `tBodyAccStdX`
+* `tBodyAccStdY`
+* `tBodyAccStdZ`
+* `tGravityAccMeanX`
+* `tGravityAccMeanY`
+* `tGravityAccMeanZ`
+* `tGravityAccStdX`
+* `tGravityAccStdY`
+* `tGravityAccStdZ`
+* `tBodyAccJerkMeanX`
+* `tBodyAccJerkMeanY`
+* `tBodyAccJerkMeanZ`
+* `tBodyAccJerkStdX`
+* `tBodyAccJerkStdY`
+* `tBodyAccJerkStdZ`
+* `tBodyGyroMeanX`
+* `tBodyGyroMeanY`
+* `tBodyGyroMeanZ`
+* `tBodyGyroStdX`
+* `tBodyGyroStdY`
+* `tBodyGyroStdZ`
+* `tBodyGyroJerkMeanX`
+* `tBodyGyroJerkMeanY`
+* `tBodyGyroJerkMeanZ`
+* `tBodyGyroJerkStdX`
+* `tBodyGyroJerkStdY`
+* `tBodyGyroJerkStdZ`
+* `tBodyAccMagMean`
+* `tBodyAccMagStd`
+* `tGravityAccMagMean`
+* `tGravityAccMagStd`
+* `tBodyAccJerkMagMean`
+* `tBodyAccJerkMagStd`
+* `tBodyGyroMagMean`
+* `tBodyGyroMagStd`
+* `tBodyGyroJerkMagMean`
+* `tBodyGyroJerkMagStd`
+* `fBodyAccMeanX`
+* `fBodyAccMeanY`
+* `fBodyAccMeanZ`
+* `fBodyAccStdX`
+* `fBodyAccStdY`
+* `fBodyAccStdZ`
+* `fBodyAccMeanFreqX`
+* `fBodyAccMeanFreqY`
+* `fBodyAccMeanFreqZ`
+* `fBodyAccJerkMeanX`
+* `fBodyAccJerkMeanY`
+* `fBodyAccJerkMeanZ`
+* `fBodyAccJerkStdX`
+* `fBodyAccJerkStdY`
+* `fBodyAccJerkStdZ`
+* `fBodyAccJerkMeanFreqX`
+* `fBodyAccJerkMeanFreqY`
+* `fBodyAccJerkMeanFreqZ`
+* `fBodyGyroMeanX`
+* `fBodyGyroMeanY`
+* `fBodyGyroMeanZ`
+* `fBodyGyroStdX`
+* `fBodyGyroStdY`
+* `fBodyGyroStdZ`
+* `fBodyGyroMeanFreqX`
+* `fBodyGyroMeanFreqY`
+* `fBodyGyroMeanFreqZ`
+* `fBodyAccMagMean`
+* `fBodyAccMagStd`
+* `fBodyAccMagMeanFreq`
+* `fBodyBodyAccJerkMagMean`
+* `fBodyBodyAccJerkMagStd`
+* `fBodyBodyAccJerkMagMeanFreq`
+* `fBodyBodyGyroMagMean`
+* `fBodyBodyGyroMagStd`
+* `fBodyBodyGyroMagMeanFreq`
+* `fBodyBodyGyroJerkMagMean`
+* `fBodyBodyGyroJerkMagStd`
+* `fBodyBodyGyroJerkMagMeanFreq`
 
-Data Set Information:
-The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data.
+# Activity Labels
 
-The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
+* `WALKING` (value `1`): subject was walking during the test
+* `WALKING_UPSTAIRS` (value `2`): subject was walking up a staircase during the test
+* `WALKING_DOWNSTAIRS` (value `3`): subject was walking down a staircase during the test
+* `SITTING` (value `4`): subject was sitting during the test
+* `STANDING` (value `5`): subject was standing during the test
+* `LAYING` (value `6`): subject was laying down during the test
